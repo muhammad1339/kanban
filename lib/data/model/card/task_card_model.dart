@@ -14,9 +14,9 @@ class TaskCard extends HiveObject {
   });
 
   @HiveField(0)
-  final int? id;
+  final String? id;
   @HiveField(1)
-  final int? boardId;
+  final String? boardId;
   @HiveField(2)
   final String? name;
   @HiveField(3)

@@ -17,7 +17,7 @@ class BoardAdapter extends TypeAdapter<Board> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return Board(
-      id: fields[0] as int?,
+      id: fields[0] as String?,
       name: fields[1] as String?,
       taskCards: (fields[2] as List?)?.cast<TaskCard>(),
     );

@@ -19,8 +19,8 @@ class TaskCardAdapter extends TypeAdapter<TaskCard> {
     return TaskCard(
       name: fields[2] as String?,
       tasks: (fields[3] as List?)?.cast<Task>(),
-      id: fields[0] as int?,
-      boardId: fields[1] as int?,
+      id: fields[0] as String?,
+      boardId: fields[1] as String?,
     );
   }
 

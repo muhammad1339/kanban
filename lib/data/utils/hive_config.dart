@@ -3,6 +3,10 @@ import 'package:hive_flutter/hive_flutter.dart';
 import '../model/model.dart';
 
 class HiveConfig {
+  static const String boardBox = "board_box";
+
+  static const String cardBox = "card_box";
+
   static const String taskBox = "task_box";
 
   static Future<void> config() async {
@@ -15,8 +19,9 @@ class HiveConfig {
     Hive.registerAdapter(TaskStatusAdapter());
   }
 
-  static Future<void> openBox() async {
+  static Future<Box> openBoardBox() async {
     // open boxes
-    await Hive.openBox(taskBox);
+    final box = await Hive.openBox(boardBox);
+    return box;
   }
 }

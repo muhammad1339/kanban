@@ -18,7 +18,7 @@ class Task extends HiveObject {
     this.taskCardId,
   });
   @HiveField(0)
-  final int? id;
+  final String? id;
   @HiveField(1)
   final String? name;
   @HiveField(2)
@@ -28,17 +28,17 @@ class Task extends HiveObject {
   @HiveField(4)
   final int? timeSpentInMillies;
   @HiveField(5)
-  final int? createdAt;
+  final DateTime? createdAt;
   @HiveField(6)
-  final int? updatedAt;
+  final DateTime? updatedAt;
   @HiveField(7)
-  final int? completedAt;
+  final DateTime? completedAt;
   @HiveField(8)
-  final int? deletedAt;
+  final DateTime? deletedAt;
   @HiveField(9)
-  final int? boardId;
+  final String? boardId;
   @HiveField(10)
-  final int? taskCardId;
+  final String? taskCardId;
 }
 
 @HiveType(typeId: 3)

@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:hive/hive.dart';
 
 import '../card/task_card_model.dart';
@@ -12,9 +13,12 @@ class Board extends HiveObject {
     this.taskCards = const [],
   });
   @HiveField(0)
-  final int? id;
+  final String? id;
   @HiveField(1)
   final String? name;
   @HiveField(2)
   List<TaskCard>? taskCards;
+
+  @override
+  String toString() => 'Board(id: $id, name: $name)';
 }

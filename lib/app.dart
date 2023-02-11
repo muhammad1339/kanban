@@ -26,7 +26,7 @@ class App extends StatelessWidget {
           centerTitle: true,
         ),
       ),
-      home: const BoardPage(),
+      home: BoardPage(),
     );
   }
 
