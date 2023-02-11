@@ -11,6 +11,8 @@ void main() async {
   await EasyLocalization.ensureInitialized();
   await HiveConfig.config();
   await HiveConfig.openBoardBox();
+  await HiveConfig.openCardBox();
+  await HiveConfig.openTaskBox();
   Bloc.observer = AppBlocObserver();
 
   runApp(

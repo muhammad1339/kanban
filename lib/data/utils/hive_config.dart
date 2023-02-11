@@ -24,4 +24,16 @@ class HiveConfig {
     final box = await Hive.openBox(boardBox);
     return box;
   }
+
+  static Future<Box> openCardBox() async {
+    // open boxes
+    final box = await Hive.openBox(cardBox);
+    return box;
+  }
+
+  static Future<Box> openTaskBox() async {
+    // open boxes
+    final box = await Hive.openBox(taskBox);
+    return box;
+  }
 }
