@@ -35,10 +35,13 @@ class BoardItem extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              label,
-              style: AppTextStyles.titleStyle.copyWith(fontSize: 14),
+            Expanded(
+              child: Text(
+                label,
+                style: AppTextStyles.titleStyle.copyWith(fontSize: 14),
+              ),
             ),
+            const SizedBox(width: 8),
             SvgPicture.asset(suffixIcon),
           ],
         ),
