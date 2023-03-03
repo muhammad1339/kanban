@@ -21,4 +21,16 @@ class Board extends HiveObject {
 
   @override
   String toString() => 'Board(id: $id, name: $name)';
+
+  @override
+  bool operator ==(covariant Board other) {
+    if (identical(this, other)) return true;
+  
+    return 
+      other.id == id &&
+      other.name == name;
+  }
+
+  @override
+  int get hashCode => id.hashCode ^ name.hashCode;
 }

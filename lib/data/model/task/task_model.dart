@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:hive/hive.dart';
 
 part 'task_model.g.dart';
@@ -39,6 +40,39 @@ class Task extends HiveObject {
   final String? boardId;
   @HiveField(10)
   final String? taskCardId;
+
+  @override
+  bool operator ==(covariant Task other) {
+    if (identical(this, other)) return true;
+  
+    return 
+      other.id == id &&
+      other.name == name &&
+      other.describtion == describtion &&
+      other.status == status &&
+      other.timeSpentInMillies == timeSpentInMillies &&
+      other.createdAt == createdAt &&
+      other.updatedAt == updatedAt &&
+      other.completedAt == completedAt &&
+      other.deletedAt == deletedAt &&
+      other.boardId == boardId &&
+      other.taskCardId == taskCardId;
+  }
+
+  @override
+  int get hashCode {
+    return id.hashCode ^
+      name.hashCode ^
+      describtion.hashCode ^
+      status.hashCode ^
+      timeSpentInMillies.hashCode ^
+      createdAt.hashCode ^
+      updatedAt.hashCode ^
+      completedAt.hashCode ^
+      deletedAt.hashCode ^
+      boardId.hashCode ^
+      taskCardId.hashCode;
+  }
 }
 
 @HiveType(typeId: 3)
